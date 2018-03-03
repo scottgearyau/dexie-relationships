@@ -119,7 +119,8 @@ const Relationships = (db) => {
           // Populate column on each row
           rows.forEach(row => {
             let foreignKey = row[targetIndex]
-            let record = lookup[foreignKey]
+            // Quick fix. Allow default returns in future settings?
+            var record = (lookup[foreignKey] !== undefined) ? lookup[foreignKey] : (foreignTable.oneToOne) ? null : [];
             if (!record) {
               throw new Error(
                 `Could not lookup foreign key where ` +
