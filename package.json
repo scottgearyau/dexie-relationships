@@ -35,7 +35,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ignasbernotas/dexie-relationships.git"
+    "url": "git+https://github.com/scottgearyau/dexie-relationships.git"
   },
   "keywords": [
     "dexie",
